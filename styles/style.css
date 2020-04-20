@@ -25,7 +25,7 @@
   z-index: 1;
 }
 
-.logo_place_header {
+.logo__place-header {
   background-image: url(../images/logo_place_header.svg);
   position: absolute;
   left: 64px;
@@ -243,16 +243,16 @@
   overflow: hidden;
 }
 
-.section-title_theme_dark {
+.section-title-theme-dark {
   color: white;
 }
 
-.section-subtitle_theme_dark {
+.section-subtitle-theme-dark {
   color: white;
 }
 
 /* и элемента с модификатором вида ключ-значение */
-.table__cell_theme_dark {
+.table__cell-theme-dark {
   width: 200px;
   color: white;
   margin-right: 0;
@@ -285,13 +285,15 @@
   justify-content: space-between;
   margin: 0 auto;
   width: 90%;
-  height: 250px;
+  min-height: 250px;
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer__column-content-copyright {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   flex-basis: 711px;
   position: relative;
 }
@@ -313,35 +315,20 @@
 }
 
 .footer__column-heading {
-  margin: 0 0 20px;
   line-height: 30px;
   font-size: 18px;
   font-weight: bold;
-}
-
-.footer__column-content-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer__column-content-social {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer__social-icon {
-  width: 16px;
-  height: 16px;
-  margin-right: 10px;
+  margin-block-end: 20px;
 }
 
 .footer__column-links {
   margin: 0;
   padding: 0;
+  margin-block-end: 16px;
 }
 /* Выше сбросил отступы для списков */
 
-.footer__column-link {
+.footer__list-item {
   list-style: none;
 }
 
@@ -351,6 +338,12 @@
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
+}
+
+.footer__social-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
 }
 
 /* Спасибо */
