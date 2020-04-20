@@ -15,19 +15,20 @@
   max-height: 756px;
   display: flex;
   position: relative;
-  background-color: #f2f2f2f2;
+  z-index: 1;
+  background-color: #f2f2f2;
   /* выше установили ограничения для секции */
 }
 
 .logo {
-  width: 183px;
-  height: 32px;
-  z-index: 1;
+  position: absolute;
 }
 
-.logo__place-header {
+.logo__place_header {
   background-image: url(../images/logo_place_header.svg);
-  position: absolute;
+  background-size: cover;
+  width: 183px;
+  height: 32px;
   left: 64px;
   top: 30px;
 }
@@ -35,12 +36,11 @@
 .header__title {
   display: flex;
   align-items: center;
-  width: 730px;
+  max-width: 730px;
   margin-left: 64px;
   line-height: 96px;
   font-size: 102px;
   font-weight: bold;
-  z-index: 2;
 }
 
 .header__link {
@@ -50,14 +50,12 @@
 
 .header__subtitle {
   position: absolute;
-  width: 388px;
+  max-width: 388px;
   bottom: 30px;
   left: 64px;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
-  z-index: 2;
-
 }
 
 .header__main-illustration {
@@ -66,7 +64,6 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  z-index: 1;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -77,6 +74,7 @@
   position: absolute;
   top: 64px;
   right: 0;
+  z-index: -1;
 }
 
 .description {
@@ -92,7 +90,7 @@
 }
 
 .two-columns__brief {
-  width: 175px;
+  max-width: 175px;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
@@ -103,7 +101,7 @@
 }
 
 .two-columns__main-text {
-  width: 80%;
+  max-width: 80%;
   min-width: 784px;
   line-height: 34px;
   font-size: 24px;
@@ -136,7 +134,7 @@
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  width: 60%;
+  max-width: 60%;
   line-height: 69px;
   font-size: 60px;
   font-weight: bold;
@@ -147,7 +145,7 @@
   justify-content: center;
   margin: 0 auto;
   margin-top: 20px;
-  width: 60%;
+  max-width: 60%;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
@@ -187,13 +185,13 @@
   margin-top: 20px;
 }
 
-.feinman {
+.feynman {
   display: flex;
   position: relative;
   flex-direction: column;
   margin-top: 100px;
-  height: 790px;
-  background-color: #f2f2f2f2;
+  min-height: 790px;
+  background-color: #f2f2f2;
 }
 
 .feynman__title {
@@ -201,7 +199,7 @@
   justify-content: center;
   text-align: center;
   margin: 100px auto;
-  width: 648px;
+  max-width: 648px;
   line-height: 1.15;
   font-size: 120px;
   font-weight: bold;
@@ -229,6 +227,7 @@
 }
 
 .feynman__main-illustration {
+  background-image: url(../images/feynman.png);
   width: 867px;
   height: 637px;
   position: absolute;
@@ -241,29 +240,29 @@
   background-color: #1f1f1f;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
-.section-title-theme-dark {
-  color: white;
+.section-title_theme_dark {
+  color:#fff;
 }
 
-.section-subtitle-theme-dark {
-  color: white;
+.section-subtitle_theme_dark {
+  color: #fff;
 }
 
 /* и элемента с модификатором вида ключ-значение */
-.table__cell-theme-dark {
+.table__cell_theme_dark {
   width: 200px;
   color: white;
   margin-right: 0;
   margin-top: 80px;
-  z-index: 2;
 }
 
-.feinman__background-image {
+.kaufman__triangle {
   background-image: url(../images/kaufman-triangle.svg);
   background-size: contain;
-  z-index: 1;
+  z-index: -1;
   position: absolute;
   top: 0;
   right: -210px;
@@ -278,6 +277,7 @@
   min-height: 350px;
   box-sizing: border-box;
   color: #fff;
+  position: relative;
 }
 
 .footer__columns {
@@ -293,13 +293,14 @@
   flex-direction: column;
 }
 
-.footer__column-content-copyright {
+.footer__column_content_copyright {
   flex-basis: 711px;
   position: relative;
 }
 
-.logo__place-footer {
+.logo__place_footer {
   background-image: url(../images/logo_place_footer.svg);
+  background-size: cover;
   width: 183px;
   height: 35px;
 }
@@ -318,7 +319,7 @@
   line-height: 30px;
   font-size: 18px;
   font-weight: bold;
-  margin-block-end: 20px;
+  margin: 0 0 20px;
 }
 
 .footer__column-links {
@@ -348,3 +349,5 @@
 }
 
 /* Спасибо */
+
+/* Спасибо за подробное описание ошибок и способы их решений! */
