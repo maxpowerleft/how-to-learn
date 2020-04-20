@@ -110,14 +110,9 @@
 
 .two-columns__paragraph {
   margin-block-start: 0;
-  /* Без отступа в начале строки */
-}
-
-.two-columns__paragraph::after {
-
+   /* С отступом 30px в конце строки */
   margin-block-end: 30px;
-  /* С отступом 30px в конце строки */
-
+  /* Без отступа в начале строки */
 }
 
 .two-columns__span-accent {
@@ -172,17 +167,13 @@
   font-size: 24px;
   font-weight: bold;
   margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .table__text {
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
-
-}
-
-.table__text::after {
-  margin-top: 20px;
 }
 
 .feynman {
@@ -351,3 +342,4 @@
 /* Спасибо */
 
 /* Спасибо за подробное описание ошибок и способы их решений! */
+
