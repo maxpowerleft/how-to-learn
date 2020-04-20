@@ -24,7 +24,7 @@
   position: absolute;
 }
 
-.logo__place_header {
+.logo_place_header {
   background-image: url(../images/logo_place_header.svg);
   background-size: cover;
   width: 183px;
@@ -289,7 +289,7 @@
   position: relative;
 }
 
-.logo__place_footer {
+.logo_place_footer {
   background-image: url(../images/logo_place_footer.svg);
   background-size: cover;
   width: 183px;
