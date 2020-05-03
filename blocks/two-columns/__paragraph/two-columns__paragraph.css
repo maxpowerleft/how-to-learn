@@ -1,0 +1,6 @@
+.two-columns__paragraph {
+  margin-block-start: 0;
+   /* С отступом 30px в конце строки */
+  margin-block-end: 30px;
+  /* Без отступа в начале строки */
+}
